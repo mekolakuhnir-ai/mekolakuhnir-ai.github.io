@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S1ngls — Веб-разработчик</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="#hero" class="logo">S1ngls<span class="logo-dot">.</span></a>
+            <ul class="nav-list">
+                <li><a href="#about">Про меня</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#works">Работы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+            <button class="burger" id="burger" aria-label="Меню">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container hero-inner">
+                <p class="hero-tag">Фрилансер · Лендинги · Сайты-визитки</p>
+                <h1 class="hero-title">Делаю сайты,<br>которые <span class="accent">продают</span></h1>
+                <p class="hero-text">Создаю современные одностраничные сайты и лендинги для малого бизнеса. Быстро, качественно, по адекватной цене.</p>
+                <a href="#contacts" class="btn">Обсудить проект</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">Про меня</h2>
+                <div class="about-grid">
+                    <div>
+                        <p>Привет! Я — начинающий веб-разработчик из Украины. Специализируюсь на лендингах и сайтах-визитках: быстрых, адаптивных и красивых.</p>
+                        <p>Работаю с HTML, CSS и JavaScript — это база, на которой строятся все современные сайты.</p>
+                    </div>
+                    <ul class="skills">
+                        <li>HTML5</li>
+                        <li>CSS3 / Flexbox / Grid</li>
+                        <li>JavaScript</li>
+                        <li>Адаптивная вёрстка</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">Услуги</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Лендинг</h3>
+                        <p>Одностраничный сайт для рекламы товара или услуги.</p>
+                        <span class="price">от 500 грн</span>
+                    </div>
+                    <div class="card">
+                        <h3>Сайт-визитка</h3>
+                        <p>Небольшой сайт для компании или личного бренда.</p>
+                        <span class="price">от 800 грн</span>
+                    </div>
+                    <div class="card">
+                        <h3>Правки сайта</h3>
+                        <p>Исправление вёрстки, адаптивность, мелкие доработки.</p>
+                        <span class="price">от 200 грн</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="works">
+            <div class="container">
+                <h2 class="section-title">Мои работы</h2>
+                <div class="works-grid">
+                    <a href="#" class="work-card">
+                        <img src="https://placehold.co/600x400/1a1a2e/ffffff?text=Проект+1" alt="Проект 1">
+                        <div class="work-overlay"><span>Лендинг кофейни</span></div>
+                    </a>
+                    <a href="#" class="work-card">
+                        <img src="https://placehold.co/600x400/16213e/ffffff?text=Проект+2" alt="Проект 2">
+                        <div class="work-overlay"><span>Сайт-визитка тренера</span></div>
+                    </a>
+                    <a href="#" class="work-card">
+                        <img src="https://placehold.co/600x400/0f3460/ffffff?text=Проект+3" alt="Проект 3">
+                        <div class="work-overlay"><span>Лендинг сервиса</span></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="contacts">
+            <div class="container">
+                <h2 class="section-title">Контакты</h2>
+                <p class="contacts-text">Есть проект? Напишите мне — отвечаю быстро.</p>
+                <div class="contacts-links">
+                    <a href="mailto:mekolakuhnir@gmail.com" class="btn btn-outline">mekolakuhnir@gmail.com</a>
+                    <a href="https://freelancehunt.com/freelancer/S1ngls.html" target="_blank" class="btn btn-outline">Профиль на Freelancehunt</a>
+                    <a href="https://t.me/S1ngls2" target="_blank" class="btn btn-outline">Telegram</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+            <div class="container">© <span id="year"></span> S1ngls. Все права защищены.</div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
