@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алекс Тренер — сайт-визитка</title>
+    <style>
+        :root {
+            --bg: #f4f4f6;
+            --dark: #1c1c2a;
+            --accent: #ff5c2b;
+            --muted: #66667a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--dark);
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        .header {
+            background: var(--dark);
+            color: #fff;
+            padding: 16px 0;
+        }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 800; font-size: 1.4rem; }
+        .logo span { color: var(--accent); }
+        .nav { display: flex; gap: 28px; list-style: none; }
+        .nav a { color: #cfcfdd; text-decoration: none; font-size: 0.95rem; }
+        .nav a:hover { color: var(--accent); }
+
+        .hero {
+            background: linear-gradient(135deg, var(--dark) 0%, #2e2e44 100%);
+            color: #fff;
+            padding: 90px 0;
+        }
+        .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+        .hero-badge {
+            display: inline-block;
+            background: var(--accent);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 16px; line-height: 1.15; }
+        .hero p { color: #b9b9cc; margin-bottom: 28px; }
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            padding: 14px 34px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        .btn:hover { background: #ff7a4f; }
+        .hero-stats { display: flex; gap: 40px; margin-top: 40px; }
+        .stat { text-align: center; }
+        .stat b { display: block; font-size: 2rem; color: var(--accent); }
+        .stat span { font-size: 0.85rem; color: #b9b9cc; }
+
+        .programs { padding: 80px 0; }
+        .section-title { font-size: 1.8rem; margin-bottom: 36px; }
+        .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 28px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+        .card h3 { margin-bottom: 10px; }
+        .card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 16px; }
+        .card .price { color: var(--accent); font-weight: 800; font-size: 1.2rem; }
+
+        .about { background: #fff; padding: 80px 0; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+        .about p { color: var(--muted); margin-bottom: 14px; }
+
+        .contact { padding: 80px 0; text-align: center; }
+        .contact .btn { margin: 0 8px 12px; }
+        .btn-ghost {
+            background: none;
+            border: 2px solid var(--dark);
+            color: var(--dark);
+        }
+        .btn-ghost:hover { background: var(--dark); color: #fff; }
+
+        @media (max-width: 768px) {
+            .hero-inner, .about-grid { grid-template-columns: 1fr; }
+            .cards { grid-template-columns: 1fr; }
+            .nav { display: none; }
+            .hero-stats { gap: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <div class="logo">Алекс<span>.</span></div>
+            <ul class="nav">
+                <li><a href="#programs">Программы</a></li>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-inner">
+            <div>
+                <span class="hero-badge">Персональный тренер</span>
+                <h1>Твоя лучшая форма<br>начинается здесь</h1>
+                <p>Персональные тренировки и программы питания. Без изнурительных диет — только система, которая работает.</p>
+                <a href="#contact" class="btn">Записаться на тренировку</a>
+                <div class="hero-stats">
+                    <div class="stat"><b>7 лет</b><span>опыта</span></div>
+                    <div class="stat"><b>300+</b><span>клиентов</span></div>
+                    <div class="stat"><b>98%</b><span>остаются</span></div>
+                </div>
+            </div>
+            <div style="border-radius: 20px; background: linear-gradient(135deg, #3a3a55, #1c1c2a); height: 360px; display: flex; align-items: center; justify-content: center; font-size: 5rem;">🏋️</div>
+        </div>
+    </section>
+
+    <section id="programs" class="programs">
+        <div class="container">
+            <h2 class="section-title">Программы</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Персональные тренировки</h3>
+                    <p>Индивидуальная программа под твою цель и уровень подготовки.</p>
+                    <span class="price">400 грн / занятие</span>
+                </div>
+                <div class="card">
+                    <h3>Онлайн-сопровождение</h3>
+                    <p>Программа тренировок и питания, проверка техники по видео.</p>
+                    <span class="price">1500 грн / месяц</span>
+                </div>
+                <div class="card">
+                    <h3>Групповые тренировки</h3>
+                    <p>Мини-группы до 6 человек. Мотивация и результат вместе.</p>
+                    <span class="price">200 грн / занятие</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container about-grid">
+            <div>
+                <h2 class="section-title">Обо мне</h2>
+                <p>Мастер спорта по пауэрлифтингу, сертифицированный тренер (ISSA, FPA). Работаю с новичками, с опытными спортсменами и с теми, кто возвращается к спорту после перерыва.</p>
+                <p>Моя философия: тренировки должны быть регулярными и в удовольствие. Составляю план так, чтобы тебе было комфортно и хотелось продолжать.</p>
+            </div>
+            <div style="border-radius: 20px; background: #ececf3; height: 320px; display: flex; align-items: center; justify-content: center; font-size: 4rem;">💪</div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Запишись на бесплатную консультацию</h2>
+            <p style="color: var(--muted); margin-bottom: 28px;">Первый разговор — бесплатно. Поговорим, посмотрим и составим план.</p>
+            <a href="#" class="btn">Позвонить</a>
+            <a href="#" class="btn btn-ghost">Написать в Telegram</a>
+        </div>
+    </section>
+</body>
+</html>

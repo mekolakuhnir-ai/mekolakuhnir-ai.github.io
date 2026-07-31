@@ -252,6 +252,8 @@ section {
     border-radius: 12px;
     overflow: hidden;
     display: block;
+    min-height: 220px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
 }
 
 .work-card img {
@@ -267,16 +269,15 @@ section {
 .work-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(15, 15, 23, 0.75);
+    background: linear-gradient(to top, rgba(15, 15, 23, 0.92) 0%, rgba(15, 15, 23, 0.35) 55%, rgba(15, 15, 23, 0) 100%);
     display: flex;
     align-items: flex-end;
     padding: 20px;
-    opacity: 0;
-    transition: opacity 0.3s;
+    transition: background 0.3s;
 }
 
 .work-card:hover .work-overlay {
-    opacity: 1;
+    background: linear-gradient(to top, rgba(233, 69, 96, 0.9) 0%, rgba(15, 15, 23, 0.3) 100%);
 }
 
 .work-overlay span {

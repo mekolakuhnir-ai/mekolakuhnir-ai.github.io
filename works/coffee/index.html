@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Room — лендинг кофейни</title>
+    <style>
+        :root {
+            --cream: #f5ead6;
+            --brown: #3d2b1f;
+            --dark: #241811;
+            --accent: #c98a4b;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            background: var(--dark);
+            color: var(--cream);
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .logo { font-size: 1.6rem; font-weight: 700; color: var(--accent); }
+        .nav-links { display: flex; gap: 28px; list-style: none; }
+        .nav-links a { color: var(--cream); text-decoration: none; opacity: 0.8; }
+        .nav-links a:hover { opacity: 1; color: var(--accent); }
+
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+            background: radial-gradient(ellipse at top, #4a3324 0%, var(--dark) 65%);
+        }
+        .hero h1 { font-size: clamp(2.2rem, 6vw, 3.5rem); margin-bottom: 16px; }
+        .hero p { font-size: 1.15rem; opacity: 0.8; max-width: 600px; margin: 0 auto 32px; }
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #1a1008;
+            padding: 14px 36px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 80px 0; }
+        .feature {
+            background: #2f2018;
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+        }
+        .feature h3 { margin-bottom: 10px; color: var(--accent); }
+        .feature p { opacity: 0.75; font-size: 0.95rem; }
+
+        .menu { padding: 80px 0; border-top: 1px solid #3a2c20; }
+        .menu h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            background: #2f2018;
+            padding: 16px 24px;
+            border-radius: 10px;
+        }
+        .price { color: var(--accent); font-weight: 700; }
+
+        .footer { text-align: center; padding: 40px 0; opacity: 0.5; font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            .features { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <div class="logo">Coffee Room</div>
+            <ul class="nav-links">
+                <li><a href="#menu">Меню</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Кофе, который<br>начинает день правильно</h1>
+            <p>Обжарка собственная, зерно из 6 стран. Завтраки, десерты и атмосфера, в которую хочется возвращаться.</p>
+            <a href="#menu" class="btn">Посмотреть меню</a>
+        </div>
+    </section>
+
+    <section id="about" class="features container">
+        <div class="feature">
+            <h3>☕ Свежая обжарка</h3>
+            <p>Обжариваем зерно каждую неделю — вкус всегда свежий и насыщенный.</p>
+        </div>
+        <div class="feature">
+            <h3>🍰 Домашние десерты</h3>
+            <p>Печём каждый день сами: чизкейки, круассаны и корзиночки.</p>
+        </div>
+        <div class="feature">
+            <h3>📶 Wi-Fi и розетки</h3>
+            <p>Светло, тихо и удобно — идеально, чтобы поработать или почитать.</p>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Меню</h2>
+            <div class="menu-grid">
+                <div class="menu-item"><span>Американо</span><span class="price">60 грн</span></div>
+                <div class="menu-item"><span>Капучино</span><span class="price">75 грн</span></div>
+                <div class="menu-item"><span>Латте</span><span class="price">80 грн</span></div>
+                <div class="menu-item"><span>Раф</span><span class="price">90 грн</span></div>
+                <div class="menu-item"><span>Чизкейк</span><span class="price">95 грн</span></div>
+                <div class="menu-item"><span>Круассан</span><span class="price">55 грн</span></div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacts" class="footer">
+        <div class="container">Coffee Room · ул. Центральная, 12 · ежедневно 8:00–22:00</div>
+    </footer>
+</body>
+</html>
